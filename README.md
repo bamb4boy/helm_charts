@@ -4,8 +4,8 @@ My steps for doing the task
 
 Your Task:
 # 1 - Connect by SSH to the VM with the key file
-The Command for the connection:
-	ssh -i ./gleb.pem azureuser@20.103.250.163
+The Command for the connection
+ssh -i ./gleb.pem azureuser@20.103.250.163
 
 
 # 2 - Install any required CLI tool (Hint: you’ll need azure CLI, kubectl, helm)
