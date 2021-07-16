@@ -8,23 +8,23 @@ The Command for the connection:
 ssh -i ./gleb.pem azureuser@20.103.250.163
 
 
-#2 - Install any required CLI tool (Hint: you’ll need azure CLI, kubectl, helm)
+# 2 - Install any required CLI tool (Hint: you’ll need azure CLI, kubectl, helm)
     Installed az, kubectl, helm, docker and jenkins
     
 
-#3 - Login to the azure using “managed identity”
+# 3 - Login to the azure using “managed identity”
 The command for the login with "managed identity"
 az login --identity
 
 
-#4 - Connect to the following Kubernetes cluster as admin
+# 4 - Connect to the following Kubernetes cluster as admin
 	AKS name: gleb-interview-aks
        Resource group: devops-interview-rg
 The command to connect to the k8s cluster with as admin
 az aks get-credentials --admin --resource-group devops-interview-rg --name gleb-interview-aks
 
 
-#5 - Install ingress nginx controller
+# 5 - Install ingress nginx controller
 Create a namespace for your ingress resources
 kubectl create namespace ingress-basic
 
@@ -42,7 +42,7 @@ helm install nginx-ingress ingress-nginx/ingress-nginx \
 kubectl --namespace ingress-basic get services
 
 
-#6 - Create and deploy helm chart for the following application:
+# 6 - Create and deploy helm chart for the following application:
     Image: simple-web
     Registry: acrinterview.azurecr.io   
 - To Pull the image to localhost:
@@ -60,10 +60,10 @@ helm uninstall 'glebchart'
 
  8 - Add to the helm charts template HPA and ingress rule
 
- #9 - Check access from public IP to the simple-app
+ # 9 - Check access from public IP to the simple-app
  Go to browser and enter the load balancer ip with the port :8000
 
- #10 - Bonus task: Install Jenkins on the Linux VM and create a pipeline for deploying the helm chart from the repo.
+ # 10 - Bonus task: Install Jenkins on the Linux VM and create a pipeline for deploying the helm chart from the repo.
  - To Install jenkins:
     wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
     sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
