@@ -5,6 +5,7 @@ My steps for doing the task
 Your Task:
 # 1 - Connect by SSH to the VM with the key file
 The Command for the connection:
+
 ssh -i ./gleb.pem azureuser@20.103.250.163
 
 
